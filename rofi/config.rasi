@@ -130,16 +130,16 @@ button selected {
 }
 num-filtered-rows {
     expand:     false;
-    text-color: Gray;
+    text-color: @normal-foreground;
 }
 num-rows {
     expand:     false;
-    text-color: Gray;
+    text-color: @normal-foreground;
 }
 textbox-num-sep {
     expand:     false;
     str:        "/";
-    text-color: Gray;
+    text-color: @normal-foreground;
 }
 inputbar {
     padding:    1px ;
@@ -155,8 +155,8 @@ entry {
     text-color:        @normal-foreground;
     cursor:            text;
     spacing:           0;
-    placeholder-color: Gray;
-    placeholder:       "Type to filter";
+    placeholder-color: @normal-foreground;
+    placeholder:       "";
 }
 prompt {
     spacing:    0;

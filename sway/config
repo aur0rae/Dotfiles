@@ -16,10 +16,7 @@ set $term foot
 set $file thunar
 
 # Application launcher
-set $rofi_cmd rofi \
-        -terminal '$term'
-
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+set $menu rofi -show drun
 
 # Set border size
 default_border pixel 2
@@ -29,7 +26,7 @@ gaps inner 10
 gaps outer 5
 
 # Wallpaper
-output * bg /usr/share/backgrounds/default.jxl fill
+output * bg ~/Pictures/bg.png fillS
 
 # Colors and theming
 include catppuccin-macchiato
