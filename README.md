@@ -1,9 +1,11 @@
 # My Sway config
+
 This is my current working config on Fedora Sway Atomic.
 
-## Usage
+## Usage:
+
 Sway is a tiling Wayland compositor/WM and as such, requires some basic keybinds to 
-function. The most important ones are:
+function. The most important ones are listed below.
 
 -> Spawn a terminal - MOD + Shift + Enter
 -> Kill a window - MOD + Shift + Q
@@ -14,7 +16,8 @@ To get the full list of bindings, check `sway/config`. At the moment, these are
 fairly stock, but in time they may change.
 
 ## Dependencies:
-This currently relies on:
+
+This currently relies on a few dependencies shipped by Sway Atomic.
 
 -> Sway
 -> Swaylock
