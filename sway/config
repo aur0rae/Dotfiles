@@ -1,4 +1,7 @@
-### Variables
+### Include configs ###
+include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+
+### Variables ###
 
 # Mod key
 set $mod Mod4
@@ -18,6 +21,10 @@ set $file thunar
 # Application launcher
 set $menu rofi -show drun
 
+### Graphical settings ###
+# Launch Waybar
+bar swaybar_command waybar
+
 # Set border size
 default_border pixel 2
 
@@ -26,7 +33,7 @@ gaps inner 10
 gaps outer 5
 
 # Wallpaper
-output * bg ~/Pictures/bg.png fillS
+output * bg ~/Pictures/bg.png fill
 
 # Colors and theming
 include catppuccin-macchiato
@@ -39,18 +46,15 @@ client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
-### Idle configuration
-
+### Idle configuration ###
 # Lock screen after 5 minutes, turn off screen after 5 more
 exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f -c 000000'
 
-### Key bindings
-
-# Basics:
-
+### Keybindings ###
+# Basics
     # Spawn a terminal
     bindsym $mod+Shift+Return exec $term
 
@@ -72,8 +76,7 @@ exec swayidle -w \
     # Kill Sway
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-# Moving around:
-
+# Moving around
     # Move focus
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -87,8 +90,7 @@ exec swayidle -w \
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
 
-# Workspaces:
-
+# Workspaces
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -113,12 +115,12 @@ exec swayidle -w \
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
 
-# Layout stuff:
-    # Split current focused object
+# Edit layout
+    # Split focused object
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
-    # Switch the current container between different layout styles
+    # Switch layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
@@ -132,19 +134,8 @@ exec swayidle -w \
     # Move focus to parent container
     bindsym $mod+a focus parent
 
-# Scratchpad:
-    # Move focused window to scratchpad
-    bindsym $mod+Shift+minus move scratchpad
-
-    # Cycle through/hide focused scratchpad window
-    bindsym $mod+minus scratchpad show
-
-# Resizing containers:
+# Resize windows
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
@@ -155,15 +146,3 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-# Include configs from 3 locations:
-#  - /usr/share/sway/config.d
-#  - /etc/sway/config.d
-#  - $XDG_CONFIG_HOME/sway/config.d ($HOME/.config/sway/config.d)
-#
-# If multiple directories contain the files with the same name, the later
-# directory takes precedence; `$XDG_CONFIG_HOME/sway/config.d/20-swayidle.conf`
-# will always be loaded instead of `/usr/share/sway/config.d/20-swayidle.conf`
-# or `/etc/sway/config.d/20-swayidle.conf`
-
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
