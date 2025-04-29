@@ -14,8 +14,8 @@
 /* ===== Workspaces ===== */
 #workspaces {
     background: @surface0;
-    border-radius: 20px;
-    margin: 0 10px;    
+    border-radius: 10px;
+    margin: 0 15px;    
 }
 
 #workspaces button {
@@ -38,14 +38,15 @@
 /* ===== Clock ===== */
 #clock {
     background: @surface0;
-    border-radius: 20px;
-    padding: 0 20px;
+    border-radius: 10px;
+    padding: 0 10px;
 }
 
 /* ===== Idle Inhibitor ===== */
 #idle_inhibitor {
     background: @surface0;
-    border-radius: 20 0 0 20px;
+    border-radius: 10px;
+    margin: 0 10px;
     padding: 0 10px;
 }
 
@@ -57,7 +58,8 @@
 /* ===== Volume ===== */
 #pulseaudio {
     background: @surface0;
-    padding: 0 5px;
+    border-radius: 10 0 0 10px;
+    padding: 0 5 0 10px;
 }
 
 #pulseaudio.muted {
@@ -67,7 +69,9 @@
 /* ===== Connection ===== */
 #network {
     background: @surface0;
-    padding: 0 5px;
+    border-radius: 0 10 10 0px;
+    padding: 0 10 0 5px;
+    margin: 0 10 0 0px;
 }
 
 #network.disconnected {
@@ -78,7 +82,8 @@
 #cpu {
     background: @sky;
     color: @surface0;
-    padding: 0 5px;
+    border-radius: 10 0 0 10px;
+    padding: 0 5 0 10px;
 }
 
 #memory {
@@ -101,7 +106,9 @@
 /* ===== Battery ===== */
 #battery {
     background: @surface0;
-    padding: 0 5px;
+    padding: 0 10 0 5px;
+    border-radius: 0 10 10 0px;
+    margin: 0 10 0 0px;
 }
 
 #battery.charging, #battery.plugged {
@@ -117,7 +124,7 @@
 /* ===== Tray ===== */
 #tray {
     background: @surface0;
-    border-radius: 0 20 20 0px;
+    border-radius: 10px;
     padding: 0 10px;
-    margin: 0 10 0 0px;
+    margin: 0 15 0 0px;
 }

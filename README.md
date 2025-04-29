@@ -28,7 +28,7 @@ This currently relies on a few dependencies shipped by Sway Atomic.
 - Thunar
 - nmcli
 - NetworkManager Applet
-- Light
+- Brightnessctl
 
 These are mostly interchangeable, but make sure to change the corresponding binds 
 in the config.

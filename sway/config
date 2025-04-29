@@ -1,6 +1,3 @@
-### Include configs ###
-# include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
-
 ### Variables ###
 
 # Mod key
@@ -30,6 +27,7 @@ default_border pixel 2
 
 # Gaps
 gaps inner 10
+gaps outer 5
 
 # Wallpaper
 output * bg ~/Pictures/bg.png fill
@@ -74,6 +72,19 @@ exec swayidle -w \
 
     # Kill Sway
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Adjust volume
+    bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+
+    bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
+    bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
+
+    # Adjust brightness
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+    # Take a screenshot
+    bindsym Print exec grim -g "$(slurp)" - | wl-copy
 
 # Moving around
     # Move focus
