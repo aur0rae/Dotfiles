@@ -1,5 +1,5 @@
 ### Include configs ###
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+# include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
 ### Variables ###
 
@@ -30,7 +30,6 @@ default_border pixel 2
 
 # Gaps
 gaps inner 10
-gaps outer 5
 
 # Wallpaper
 output * bg ~/Pictures/bg.png fill

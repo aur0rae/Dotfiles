@@ -1,0 +1,123 @@
+/* ===== Global ===== */
+@import "macchiato.css";
+
+* {
+    font-size: 12px;
+}
+
+/* ===== Waybar ===== */
+#waybar {
+    background: transparent;
+    color: @text;
+}
+
+/* ===== Workspaces ===== */
+#workspaces {
+    background: @surface0;
+    border-radius: 20px;
+    margin: 0 10px;    
+}
+
+#workspaces button {
+    color: @text;
+    padding: 0 10px;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    box-shadow: inset -2 -2px @lavender;
+    border-radius: 20px;
+}
+
+#workspaces button.focused {
+    background: @lavender;
+    color: @surface0;
+    border-radius: 20px;
+}
+
+/* ===== Clock ===== */
+#clock {
+    background: @surface0;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+/* ===== Idle Inhibitor ===== */
+#idle_inhibitor {
+    background: @surface0;
+    border-radius: 20 0 0 20px;
+    padding: 0 10px;
+}
+
+#idle_inhibitor.activated {
+    background: @lavender;
+    color: @surface0;
+}
+
+/* ===== Volume ===== */
+#pulseaudio {
+    background: @surface0;
+    padding: 0 5px;
+}
+
+#pulseaudio.muted {
+    background: @blue;
+}
+
+/* ===== Connection ===== */
+#network {
+    background: @surface0;
+    padding: 0 5px;
+}
+
+#network.disconnected {
+    background: @sapphire;
+}
+
+/* ===== System Monitor ===== */
+#cpu {
+    background: @sky;
+    color: @surface0;
+    padding: 0 5px;
+}
+
+#memory {
+    background: @teal;
+    color: @surface0;
+    padding: 0 5px;
+}
+
+/* ===== CPU Temp ===== */
+#temperature {
+    background : @green;
+    color: @surface0;
+    padding: 0 5px;
+}
+
+#temperature.critical {
+    background: @red;
+}
+
+/* ===== Battery ===== */
+#battery {
+    background: @surface0;
+    padding: 0 5px;
+}
+
+#battery.charging, #battery.plugged {
+    background: @lavender;
+    color: @surface0;
+}
+
+#battery.critical {
+    background: @red;
+    color: @surface0;
+}
+
+/* ===== Tray ===== */
+#tray {
+    background: @surface0;
+    border-radius: 0 20 20 0px;
+    padding: 0 10px;
+    margin: 0 10 0 0px;
+}
