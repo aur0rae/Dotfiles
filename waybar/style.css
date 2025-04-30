@@ -25,7 +25,7 @@
 
 #workspaces button:hover {
     background: transparent;
-    box-shadow: inset 2 1px @lavender;
+    box-shadow: 2 1px @lavender;
     border-color: @lavender;
     border-radius: 10px;
 }
@@ -33,7 +33,6 @@
 #workspaces button.focused {
     background: @lavender;
     color: @surface0;
-    border-color: @lavender;
     border-radius: 10px;
 }
 
