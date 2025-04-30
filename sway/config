@@ -14,13 +14,13 @@ exec_always  --no-startup-id  dunst &
   set $right l
 
   # Terminal emulator
-  set $term foot
+  set $term kitty
 
   # File manager
   set $file thunar
 
   # Application launcher
-  set $menu rofi -show drun
+  set $menu wofi --show drun
 
 ### Graphical Settings ###
   # Set border size
