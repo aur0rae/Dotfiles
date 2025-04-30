@@ -10,12 +10,12 @@ format = """
 [](lavender)\
 $username\
 $hostname\
-[](bg:sky fg:lavender)\
+[](bg:blue fg:lavender)\
 $directory\
-[](fg:sky bg:teal)\
+[](fg:blue bg:sky)\
 $git_branch\
 $git_status\
-[ ](fg:teal)\n
+[ ](fg:sky)\n
 ❯ 
 """
 
@@ -23,16 +23,16 @@ $git_status\
 show_always = true
 style_user = "bg:lavender fg:surface0"
 style_root = "bg:lavender fg:surface0"
-format = '[$user]($style)'
+format = '[ $user]($style)'
 
 [hostname]
 ssh_only = false
 style = "bg:lavender fg:surface0"
-format = '[@$hostname]($style)'
+format = '[@$hostname ]($style)'
 disabled = false
 
 [directory]
-style = "bg:sky fg:surface0"
+style = "bg:blue fg:surface0"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -44,11 +44,11 @@ truncation_symbol = "…/"
 "Pictures" = " "
 
 [git_branch]
-style = "bg:teal fg:surface0"
+style = "bg:sky fg:surface0"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:teal fg:surface0"
+style = "bg:sky fg:surface0"
 format = '[$all_status$ahead_behind ]($style)'
 
 [palettes.catppuccin_mocha]

@@ -129,15 +129,15 @@
 }
 
 #battery {
-    background: @surface0;
-    color: @text;
+    background: @lavender;
+    color: @surface0;
     padding: 0 10 0 5px;
     border-radius: 0 10 10 0px;
     margin: 0 15 0 0px;
 }
 
 #battery.charging, #battery.plugged {
-    background: @lavender;
+    background: @blue;
     color: @surface0;
 }
 
