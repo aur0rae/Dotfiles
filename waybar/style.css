@@ -80,23 +80,25 @@
 
 /* ===== System Monitor ===== */
 #cpu {
-    background: @sky;
+    background: @mauve;
     color: @surface0;
     border-radius: 10 0 0 10px;
     padding: 0 5 0 10px;
 }
 
 #memory {
-    background: @teal;
+    background: @mauve;
     color: @surface0;
     padding: 0 5px;
 }
 
 /* ===== CPU Temp ===== */
 #temperature {
-    background : @green;
+    background : @lavender;
     color: @surface0;
+    border-radius: 0 10 10 0px;
     padding: 0 5px;
+    margin: 0 10 0 0px;
 }
 
 #temperature.critical {
@@ -107,12 +109,12 @@
 #battery {
     background: @surface0;
     padding: 0 10 0 5px;
-    border-radius: 0 10 10 0px;
+    border-radius: 10px;
     margin: 0 10 0 0px;
 }
 
 #battery.charging, #battery.plugged {
-    background: @lavender;
+    background: @teal;
     color: @surface0;
 }
 
