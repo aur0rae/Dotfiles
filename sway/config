@@ -47,6 +47,8 @@ exec_always  --no-startup-id  dunst
     gsettings set $gnome-schema gtk-theme 'catppuccin-mocha-lavender-standard+default'
   }
 
+  seat seat0 xcursor_theme catppuccin-mocha-lavender-cursors 18
+
   # target                 title     bg    text   indicator  border
   client.focused           $lavender $base $text  $rosewater $lavender
   client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
