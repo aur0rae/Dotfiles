@@ -2,7 +2,6 @@
 bar swaybar_command waybar
 exec_always  --no-startup-id  dunst &
 
-
 ### Variables ###
   # Mod key
   set $mod Mod4
@@ -20,7 +19,7 @@ exec_always  --no-startup-id  dunst &
   set $file thunar
 
   # Application launcher
-  set $menu wofi --show drun
+  set $menu wofi --show drun 
 
 ### Graphical Settings ###
   # Set border size
@@ -35,6 +34,12 @@ exec_always  --no-startup-id  dunst &
 
   # Colors and theming
   include catppuccin-mocha
+
+  set $gnome-schema org.gnome.desktop.interface
+
+  exec_always {
+    gsettings set $gnome-schema gtk-theme 'catppuccin-mocha-lavender-standard+default'
+  }
 
   # target                 title     bg    text   indicator  border
   client.focused           $lavender $base $text  $rosewater $lavender

@@ -11,13 +11,12 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
+        "power-profiles-daemon",
         "battery",
-        "tray",
-        "custom/power"
+        "tray"
     ],
 
     "sway/workspaces": {
@@ -92,8 +91,7 @@
 
     "power-profiles-daemon": {
       "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
+      "tooltip": false,
       "format-icons": {
         "default": "",
         "performance": "",
