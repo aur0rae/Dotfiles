@@ -1,6 +1,12 @@
 ### Autostart ###
 bar swaybar_command waybar
-exec_always  --no-startup-id  dunst &
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway
+exec systemctl --user import-environment"
+exec mullvad-vpn
+exec nm-applet
+exec blueman-applet
+exec_always  --no-startup-id  dunst
 
 ### Variables ###
   # Mod key

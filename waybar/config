@@ -23,13 +23,13 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        "format": "{icon}",
         "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
             "4": [],
-            "5": []
+            "5": [],
         },
 
         "format-icons": {

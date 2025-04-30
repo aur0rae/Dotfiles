@@ -20,24 +20,13 @@
 
 #workspaces button {
     color: @text;
-    padding: 0 10px;
-}
-
-#workspaces button:hover {
-    background: transparent;
-    box-shadow: 2 1px @lavender;
-    border-color: @lavender;
-    border-radius: 10px;
+    padding: 0 5px;
+    border-radius: 10px
 }
 
 #workspaces button.focused {
     background: @lavender;
     color: @surface0;
-    border-radius: 10px;
-}
-
-#workspaces button.focused:hover {
-    box-shadow: inset 2 1px @surface0;
 }
 
 /* ===== Clock ===== */
@@ -46,10 +35,6 @@
     color: @surface0;
     border-radius: 10px;
     padding: 0 15px;
-}
-
-#clock:hover {
-    box-shadow: inset 2 1px @surface0;
 }
 
 /* ===== Idle Inhibitor ===== */
@@ -148,7 +133,7 @@
     color: @text;
     padding: 0 10 0 5px;
     border-radius: 0 10 10 0px;
-    margin: 0 10 0 0px;
+    margin: 0 15 0 0px;
 }
 
 #battery.charging, #battery.plugged {
