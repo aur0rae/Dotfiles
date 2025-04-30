@@ -29,12 +29,20 @@
     color: @surface0;
 }
 
+#workspaces button:hover {
+    box-shadow: inset 2 1px @lavender;
+}
+
 /* ===== Clock ===== */
 #clock {
     background: @lavender;
     color: @surface0;
     border-radius: 10px;
     padding: 0 15px;
+}
+
+#clock:hover {
+    box-shadow: inset 2 1px @surface0;
 }
 
 /* ===== Idle Inhibitor ===== */
@@ -121,7 +129,7 @@
 #power-profiles-daemon {
     background: @lavender;
     color: @surface0;
-    padding: 0 5px;
+    padding: 0 15 0 5px;
 }
 
 #power-profiles-daemon:hover {
