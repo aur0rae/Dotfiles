@@ -1,57 +1,58 @@
-### Variables ###
-
-# Mod key
-set $mod Mod4
-
-# Direction keys
-set $left h
-set $down j
-set $up k
-set $right l
-
-# Terminal emulator
-set $term foot
-
-# File manager
-set $file thunar
-
-# Application launcher
-set $menu rofi -show drun
-
-### Graphical settings ###
-# Launch Waybar
+### Autostart ###
 bar swaybar_command waybar
+exec_always  --no-startup-id  dunst &
 
-# Set border size
-default_border pixel 2
 
-# Gaps
-gaps inner 10
-gaps outer 5
+### Variables ###
+  # Mod key
+  set $mod Mod4
 
-# Wallpaper
-output * bg ~/Pictures/bg.png fill
+  # Direction keys
+  set $left h
+  set $down j
+  set $up k
+  set $right l
 
-# Colors and theming
-include catppuccin-macchiato
+  # Terminal emulator
+  set $term foot
 
-# target                 title     bg    text   indicator  border
-client.focused           $lavender $base $text  $rosewater $lavender
-client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
-client.unfocused         $overlay0 $base $text  $rosewater $overlay0
-client.urgent            $peach    $base $peach $overlay0  $peach
-client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
-client.background        $base
+  # File manager
+  set $file thunar
+
+  # Application launcher
+  set $menu rofi -show drun
+
+### Graphical Settings ###
+  # Set border size
+  default_border pixel 2
+
+  # Gaps
+  gaps inner 10
+  gaps outer 5
+
+  # Wallpaper
+  output * bg ~/Pictures/bg.png fill
+
+  # Colors and theming
+  include catppuccin-mocha
+
+  # target                 title     bg    text   indicator  border
+  client.focused           $lavender $base $text  $rosewater $lavender
+  client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+  client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+  client.urgent            $peach    $base $peach $overlay0  $peach
+  client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+  client.background        $base
 
 ### Idle configuration ###
-# Lock screen after 5 minutes, turn off screen after 5 more
-exec swayidle -w \
+  # Lock screen after 5 minutes, turn off screen after 5 more
+  exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f -c 000000'
 
 ### Keybindings ###
-# Basics
+  # Basics
     # Spawn a terminal
     bindsym $mod+Shift+Return exec $term
 
@@ -86,7 +87,7 @@ exec swayidle -w \
     # Take a screenshot
     bindsym Print exec grim -g "$(slurp)" - | wl-copy
 
-# Moving around
+  # Moving around
     # Move focus
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -100,7 +101,7 @@ exec swayidle -w \
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
 
-# Workspaces
+  # Workspaces
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -125,7 +126,7 @@ exec swayidle -w \
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
 
-# Edit layout
+  # Edit layout
     # Split focused object
     bindsym $mod+b splith
     bindsym $mod+v splitv
@@ -144,8 +145,8 @@ exec swayidle -w \
     # Move focus to parent container
     bindsym $mod+a focus parent
 
-# Resize windows
-mode "resize" {
+  # Resize windows
+  mode "resize" {
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
@@ -154,5 +155,5 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
+  }
+  bindsym $mod+r mode "resize"
