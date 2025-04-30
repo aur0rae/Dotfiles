@@ -37,6 +37,10 @@
     border-radius: 10px;
 }
 
+#workspaces button.focused:hover {
+    box-shadow: inset 2 1px @surface0;
+}
+
 /* ===== Clock ===== */
 #clock {
     background: @lavender;
