@@ -26,6 +26,7 @@
 #workspaces button:hover {
     background: transparent;
     box-shadow: inset 2 1px @lavender;
+    border-color: @lavender;
     border-radius: 10px;
 }
 
