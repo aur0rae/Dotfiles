@@ -74,7 +74,7 @@ exec_always  --no-startup-id  dunst
     bindsym $mod+d exec $menu
 
     # Kill focused window
-    bindsym $mod+shift+q kill
+    bindsym $mod+Shift+q kill
 
     # Move and resize floating windows
     floating_modifier $mod normal
@@ -84,7 +84,7 @@ exec_always  --no-startup-id  dunst
 
     # Kill Sway
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-
+    
     # Adjust volume
     bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+

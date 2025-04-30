@@ -1,15 +1,55 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
 palette = "catppuccin_mocha"
 
-[character]
-success_symbol = "[(lavender) ❯](teal)"
-error_symbol = "[(red) ❯](teal)"
+format = """
+[](lavender)\
+$username\
+$hostname\
+[](bg:sky fg:lavender)\
+$directory\
+[](fg:sky bg:teal)\
+$git_branch\
+$git_status\
+[ ](fg:teal)\n
+❯ 
+"""
 
-[git_branch]
-style = "bold sky"
+[username]
+show_always = true
+style_user = "bg:lavender fg:surface0"
+style_root = "bg:lavender fg:surface0"
+format = '[$user]($style)'
+
+[hostname]
+ssh_only = false
+style = "bg:lavender fg:surface0"
+format = '[@$hostname]($style)'
+disabled = false
 
 [directory]
-truncation_length = 4
-style = "bold lavender"
+style = "bg:sky fg:surface0"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+style = "bg:teal fg:surface0"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:teal fg:surface0"
+format = '[$all_status$ahead_behind ]($style)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
