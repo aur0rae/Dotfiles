@@ -1,6 +1,6 @@
 # My Sway config
 
-This is my current working config on Fedora Sway Atomic.
+This is my current working config for Sway.
 
 ## Usage:
 
@@ -17,19 +17,17 @@ fairly stock, but in time they may change.
 
 ## Dependencies:
 
-This currently relies on a few dependencies shipped by Sway Atomic.
+This currently relies on a few dependencies.
 
 - Sway
 - Swaylock
 - Waybar
-- Rofi
+- Wofi
 - Dunst
-- Foot
+- Kitty
 - Thunar
-- nmcli
 - NetworkManager Applet
 - Brightnessctl
 
 These are mostly interchangeable, but make sure to change the corresponding binds 
 in the config.
-
