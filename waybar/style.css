@@ -33,14 +33,20 @@
 #workspaces button.focused {
     background: @lavender;
     color: @surface0;
+    border-color: @lavender;
     border-radius: 10px;
 }
 
 /* ===== Clock ===== */
 #clock {
-    background: @surface0;
+    background: @lavender;
+    color: @surface0;
     border-radius: 10px;
-    padding: 0 10px;
+    padding: 0 15px;
+}
+
+#clock:hover {
+    box-shadow: inset 2 1px @surface0;
 }
 
 /* ===== Idle Inhibitor ===== */
@@ -51,44 +57,63 @@
     padding: 0 10px;
 }
 
+#idle_inhibitor:hover {
+    box-shadow: inset 2 1px @green;
+}
+
 #idle_inhibitor.activated {
-    background: @lavender;
+    background: @green;
     color: @surface0;
+}
+
+#idle_inhibitor.activated:hover {
+    box-shadow: inset 2 1px @surface0;
 }
 
 /* ===== Volume ===== */
 #pulseaudio {
-    background: @surface0;
-    border-radius: 10 0 0 10px;
+    background: @sky;
+    color: @surface0;
+    border-radius: 10px;
     padding: 0 5 0 10px;
+    margin: 0 10 0 0px;
 }
 
 #pulseaudio.muted {
-    background: @blue;
+    background: @red;
+}
+
+#pulseaudio:hover {
+    box-shadow: inset 2 1px @surface0;
 }
 
 /* ===== Connection ===== */
 #network {
-    background: @surface0;
-    border-radius: 0 10 10 0px;
+    background: @teal;
+    color: @surface0;
+    border-radius: 10px;
     padding: 0 10 0 5px;
     margin: 0 10 0 0px;
 }
 
 #network.disconnected {
-    background: @sapphire;
+    background: @yellow;
+}
+
+#network:hover {
+    box-shadow: inset 2 1px @surface0;
 }
 
 /* ===== System Monitor ===== */
 #cpu {
-    background: @mauve;
+    background: @lavender;
     color: @surface0;
     border-radius: 10 0 0 10px;
     padding: 0 5 0 10px;
 }
 
 #memory {
-    background: @mauve;
+    background: @lavender;
     color: @surface0;
     padding: 0 5px;
 }
@@ -97,25 +122,24 @@
 #temperature {
     background : @lavender;
     color: @surface0;
-    border-radius: 0 10 10 0px;
     padding: 0 5px;
-    margin: 0 10 0 0px;
 }
 
 #temperature.critical {
-    background: @red;
+    background: @mauve;
 }
 
 /* ===== Battery ===== */
 #battery {
     background: @surface0;
+    color: @text;
     padding: 0 10 0 5px;
-    border-radius: 10px;
+    border-radius: 0 10 10 0px;
     margin: 0 10 0 0px;
 }
 
 #battery.charging, #battery.plugged {
-    background: @teal;
+    background: @lavender;
     color: @surface0;
 }
 
