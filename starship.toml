@@ -21,18 +21,18 @@ $git_status\
 
 [username]
 show_always = true
-style_user = "bg:lavender fg:surface0 bold"
-style_root = "bg:lavender fg:surface0 bold"
+style_user = "bg:lavender fg:surface0"
+style_root = "bg:lavender fg:surface0"
 format = '[ $user]($style)'
 
 [hostname]
 ssh_only = false
-style = "bg:lavender fg:surface0 bold"
+style = "bg:lavender fg:surface0"
 format = '[@$hostname ]($style)'
 disabled = false
 
 [directory]
-style = "bg:blue fg:surface0 bold"
+style = "bg:blue fg:surface0"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -44,11 +44,11 @@ truncation_symbol = "…/"
 "Pictures" = " "
 
 [git_branch]
-style = "bg:sky fg:surface0 bold"
+style = "bg:sky fg:surface0"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:sky fg:surface0 bold"
+style = "bg:sky fg:surface0"
 format = '[$all_status$ahead_behind ]($style)'
 
 [palettes.catppuccin_mocha]

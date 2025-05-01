@@ -3,7 +3,6 @@
 @import "mocha.css";
 
 * {
-    font-size: 12px;
     min-height: 0px;
 }
 
@@ -20,6 +19,7 @@
     background: @surface0;
     border: 2px solid @lavender;
 
+    font-size: 16px;
     border-radius: 10;
     margin: 0 5px;
 }
@@ -55,6 +55,7 @@
     background: @surface0;
     border: 2px solid @lavender;
 
+    font-size: 12px;
     border-radius: 10px;
     padding: 0 15px;
 }
@@ -71,6 +72,7 @@
     border: 2px solid @green;
     color: @text;
 
+    font-size: 12px;
     border-radius: 10px;
     margin: 0 10px;
     padding: 0 10px;
@@ -97,6 +99,7 @@
     border: 2px solid @sky;
     color: @text;
 
+    font-size: 12px;
     border-radius: 10px;
     padding: 0 10px;
     margin: 0 10 0 0px;
@@ -122,6 +125,7 @@
     border: 2px solid @teal;
     color: @text;
 
+    font-size: 12px;
     border-radius: 10px;
     padding: 0 10 0 5px;
     margin: 0 10 0 0px;
@@ -147,6 +151,7 @@
     border: 2px solid @blue;
     color: @text;
 
+    font-size: 12px;
     border-radius: 10px;
     padding: 0 10px;
     margin: 0 10 0 0px;
@@ -166,6 +171,7 @@
     border-bottom: 2px solid @lavender;
     color: @text;
 
+    font-size: 12px;
     border-radius: 10 0 0 10px;
     padding: 0 5 0 10px;
 }
@@ -176,6 +182,7 @@
     border-bottom: 2px solid @lavender;
     color: @text;
 
+    font-size: 12px;
     padding: 0 5px;
 }
 
@@ -187,6 +194,7 @@
     border-bottom: 2px solid @lavender;
     color: @text;
 
+    font-size: 12px;
     padding: 0 5px;
 }
 
@@ -201,6 +209,7 @@
     border-bottom: 2px solid @lavender;
     color: @text;
 
+    font-size: 12px;
     padding: 0 10 0 5px;
 }
 
@@ -216,6 +225,7 @@
     border-bottom: 2px solid @lavender;
     color: @text;
 
+    font-size: 12px;
     padding: 0 10 0 5px;
     border-radius: 0 10 10 0px;
     margin: 0 10 0 0px;
@@ -234,6 +244,7 @@
     border-left: 2px solid @red;
     border-bottom: 2px solid @red;
     
+    font-size: 12px;
     border-radius: 10 0 0 10px;
     padding: 0 5 0 10px;
 }
@@ -244,7 +255,7 @@
     border-right: 2px solid @red;
     border-bottom: 2px solid @red;
     
-    font-size: 20;
+    font-size: 20px;
     border-radius: 0 10 10 0px;
     padding: 0 10 0 5px;
     margin: 0 5 0 0px;
