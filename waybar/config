@@ -142,6 +142,6 @@
     "custom/power": {
         "format" : "⏻",
 	"tooltip": false,
-        "on-click": "swaymsg exit"
+        "on-click": "systemctl suspend"
     }
 }
