@@ -40,8 +40,6 @@
     background: @base;
     border-top: 2px solid @lavender;
     border-left: 2px solid @lavender;
-    border-bottom: 2px solid @crust;
-    border-right: 2px solid @crust;
 }
 
 #workspaces button.focused:hover {
