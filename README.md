@@ -26,8 +26,19 @@ This currently relies on a few dependencies.
 - Dunst
 - Kitty
 - Thunar
+
+- Swaybg
+- Swayidle
+- Pavucontrol
 - NetworkManager Applet
+- Blueman
 - Brightnessctl
+- otf-font-awesome
+- ttf-terminus-nerd
+- slurp
+- grim
+- wl-clipboard
+
 
 These are mostly interchangeable, but make sure to change the corresponding binds 
 in the config.
