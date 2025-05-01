@@ -11,12 +11,14 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
+        "bluetooth",
         "cpu",
         "memory",
         "temperature",
         "power-profiles-daemon",
         "battery",
-        "tray"
+        "tray",
+        "custom/power",
     ],
 
     "sway/workspaces": {
@@ -72,7 +74,8 @@
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "tooltip": false
     },
 
     "battery": {
@@ -106,12 +109,19 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor",
+        "tooltip": false
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "!",
+        "on-click": "blueman-manager",
         "tooltip": false
     },
 
     "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}    {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -124,4 +134,10 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
+
+    "custom/power": {
+        "format" : "⏻",
+	"tooltip": false,
+        "on-click": "systemctl suspend"
+    }
 }

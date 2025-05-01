@@ -1,27 +1,34 @@
 /* ===== Global ===== */
+
 @import "mocha.css";
 
 * {
     font-size: 12px;
+    min-height: 0px;
 }
 
 /* ===== Waybar ===== */
+
 #waybar {
     background: transparent;
     color: @text;
 }
 
 /* ===== Workspaces ===== */
+
 #workspaces {
     background: @surface0;
-    border-radius: 10px;
-    margin: 0 15px;    
+    border: 2px solid @lavender;
+
+    border-radius: 10;
+    margin: 0 15px;
 }
 
 #workspaces button {
+    border: 2px solid @surface0;
     color: @text;
-    padding: 0 5px;
-    border-radius: 10px
+
+    padding: 0 5 0 0px;
 }
 
 #workspaces button.focused {
@@ -29,32 +36,36 @@
     color: @surface0;
 }
 
-#workspaces button:hover {
-    box-shadow: inset 2 1px @lavender;
-}
-
 /* ===== Clock ===== */
+
 #clock {
-    background: @lavender;
-    color: @surface0;
+    background: @surface0;
+    border: 2px solid @lavender;
+
     border-radius: 10px;
     padding: 0 15px;
 }
 
 #clock:hover {
-    box-shadow: inset 2 1px @surface0;
+    background: @surface1;
+    box-shadow: inset 0 2px @lavender;
 }
 
 /* ===== Idle Inhibitor ===== */
+
 #idle_inhibitor {
     background: @surface0;
+    border: 2px solid @green;
+    color: @text;
+
     border-radius: 10px;
     margin: 0 10px;
     padding: 0 10px;
 }
 
 #idle_inhibitor:hover {
-    box-shadow: inset 2 1px @green;
+    background: @surface1;
+    box-shadow: inset -1 2px @green;
 }
 
 #idle_inhibitor.activated {
@@ -63,90 +74,138 @@
 }
 
 #idle_inhibitor.activated:hover {
-    box-shadow: inset 2 1px @surface0;
+    box-shadow: inset -1 2px @surface0;
 }
 
 /* ===== Volume ===== */
+
 #pulseaudio {
-    background: @sky;
-    color: @surface0;
+    background: @surface0;
+    border: 2px solid @sky;
+    color: @text;
+
     border-radius: 10px;
-    padding: 0 5 0 10px;
+    padding: 0 10px;
     margin: 0 10 0 0px;
 }
 
 #pulseaudio.muted {
-    background: @red;
+    border: 2px solid @red;
 }
 
 #pulseaudio:hover {
-    box-shadow: inset 2 1px @surface0;
+    background: @surface1;
+    box-shadow: inset -1 2px @sky;
 }
 
-/* ===== Connection ===== */
+#pulseaudio.muted:hover {
+    box-shadow: inset -1 2px @red;
+}
+
+/* ===== Network ===== */
+
 #network {
-    background: @teal;
-    color: @surface0;
+    background: @surface0;
+    border: 2px solid @teal;
+    color: @text;
+
     border-radius: 10px;
     padding: 0 10 0 5px;
     margin: 0 10 0 0px;
 }
 
 #network.disconnected {
-    background: @yellow;
+    border: @yellow;
 }
 
 #network:hover {
-    box-shadow: inset 2 1px @surface0;
+    background: @surface1;
+    box-shadow: inset -1 2px @green;
+}
+
+#network.disconnected:hover {
+    box-shadow: inset -1 2px @yellow;
+}
+
+/* ===== Bluetooth ===== */
+
+#bluetooth {
+    background: @surface0;
+    border: 2px solid @blue;
+    color: @text;
+
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 0 10 0 0px;
+}
+
+#bluetooth:hover {
+    background: @surface1;
+    box-shadow: inset -1 2px @blue;
 }
 
 /* ===== System Monitor ===== */
+
 #cpu {
-    background: @lavender;
-    color: @surface0;
+    background: @surface0;
+    border-top: 2px solid @lavender;
+    border-left: 2px solid @lavender;
+    border-bottom: 2px solid @lavender;
+    color: @text;
+
     border-radius: 10 0 0 10px;
     padding: 0 5 0 10px;
 }
 
 #memory {
-    background: @lavender;
-    color: @surface0;
+    background: @surface0;
+    border-top: 2px solid @lavender;
+    border-bottom: 2px solid @lavender;
+    color: @text;
+
     padding: 0 5px;
 }
 
 /* ===== CPU Temp ===== */
+
 #temperature {
-    background : @lavender;
-    color: @surface0;
+    background : @surface0;
+    border-top: 2px solid @lavender;
+    border-bottom: 2px solid @lavender;
+    color: @text;
+
     padding: 0 5px;
 }
 
 #temperature.critical {
-    background: @mauve;
 }
 
 /* ===== Power ===== */
+
 #power-profiles-daemon {
-    background: @lavender;
-    color: @surface0;
-    padding: 0 15 0 5px;
+    background: @surface0;
+    border-top: 2px solid @lavender;
+    border-bottom: 2px solid @lavender;
+    color: @text;
+
+    padding: 0 10 0 5px;
 }
 
 #power-profiles-daemon:hover {
-    box-shadow: inset 2 1px @surface0;
+    background: @surface1;
+    box-shadow: inset -1 2px @lavender;
 }
 
 #battery {
-    background: @lavender;
-    color: @surface0;
+    background: @surface0;
+    border-top: 2px solid @lavender;
+    border-right: 2px solid @lavender;
+    border-bottom: 2px solid @lavender;
+    color: @text;
+
     padding: 0 10 0 5px;
     border-radius: 0 10 10 0px;
-    margin: 0 15 0 0px;
-}
-
-#battery.charging, #battery.plugged {
-    background: @blue;
-    color: @surface0;
+    margin: 0 10 0 0px;
 }
 
 #battery.critical {
@@ -155,9 +214,31 @@
 }
 
 /* ===== Tray ===== */
+
 #tray {
     background: @surface0;
-    border-radius: 10px;
-    padding: 0 10px;
+    border-top: 2px solid @red;
+    border-left: 2px solid @red;
+    border-bottom: 2px solid @red;
+    
+    border-radius: 10 0 0 10px;
+    padding: 0 5 0 10px;
+}
+
+#custom-power {
+    background: @surface0;
+    border-top: 2px solid @red;
+    border-right: 2px solid @red;
+    border-bottom: 2px solid @red;
+    
+    font-size: 20;
+    border-radius: 0 10 10 0px;
+    padding: 0 10 0 5px;
     margin: 0 15 0 0px;
+}
+
+#custom-power:hover {
+    background: @red;
+    color: @text;
+    box-shadow: inset -1 2px @surface1;
 }

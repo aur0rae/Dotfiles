@@ -1,11 +1,9 @@
+include /etc/sway/config.d/*
+
 ### Autostart ###
 bar swaybar_command waybar
 
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway
-exec systemctl --user import-environment"
 exec mullvad-vpn
-exec nm-applet
-exec blueman-applet
 exec_always  --no-startup-id  dunst
 
 ### Variables ###
@@ -42,7 +40,6 @@ exec_always  --no-startup-id  dunst
   include catppuccin-mocha
 
   set $gnome-schema org.gnome.desktop.interface
-
   exec_always {
     gsettings set $gnome-schema gtk-theme 'catppuccin-mocha-lavender-standard+default'
   }
