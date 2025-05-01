@@ -28,7 +28,7 @@
     border: 2px solid @surface0;
     color: @text;
 
-    padding: 0 5 0 0px;
+    padding: 0 7 0 0px;
 }
 
 #workspaces button.focused {

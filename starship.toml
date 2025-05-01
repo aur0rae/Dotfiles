@@ -8,6 +8,7 @@ palette = "catppuccin_mocha"
 
 format = """
 [](lavender)\
+[](fg:surface0 bg:lavender)\
 $username\
 $hostname\
 [](fg:lavender bg:blue)\
