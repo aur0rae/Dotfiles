@@ -30,9 +30,7 @@ exec_always  --no-startup-id  dunst
   default_border pixel 2
 
   # Gaps
-  gaps inner 10
-  gaps outer 5
-
+  gaps inner 5
   # Wallpaper
   output * bg ~/Pictures/bg.png fill
 
@@ -96,6 +94,7 @@ exec_always  --no-startup-id  dunst
 
     # Take a screenshot
     bindsym Print exec grim -g "$(slurp)" - | wl-copy
+    bindsym $mod+Print exec grim -g "$(slurp)"
 
   # Moving around
     # Move focus

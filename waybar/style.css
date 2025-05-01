@@ -21,7 +21,7 @@
     border: 2px solid @lavender;
 
     border-radius: 10;
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 #workspaces button {
@@ -36,6 +36,19 @@
     color: @surface0;
 }
 
+#workspaces button:hover {
+    background: @base;
+    border-top: 2px solid @lavender;
+    border-left: 2px solid @lavender;
+    border-bottom: 2px solid @crust;
+    border-right: 2px solid @crust;
+}
+
+#workspaces button.focused:hover {
+    background: @lavender;
+    border: 2px solid @lavender;
+}
+
 /* ===== Clock ===== */
 
 #clock {
@@ -47,7 +60,7 @@
 }
 
 #clock:hover {
-    background: @surface1;
+    background: @base;
     box-shadow: inset 0 2px @lavender;
 }
 
@@ -64,8 +77,8 @@
 }
 
 #idle_inhibitor:hover {
-    background: @surface1;
-    box-shadow: inset -1 2px @green;
+    background: @base;
+    box-shadow: inset -2 2px @green;
 }
 
 #idle_inhibitor.activated {
@@ -74,7 +87,7 @@
 }
 
 #idle_inhibitor.activated:hover {
-    box-shadow: inset -1 2px @surface0;
+    box-shadow: inset -2 2px @base;
 }
 
 /* ===== Volume ===== */
@@ -94,12 +107,12 @@
 }
 
 #pulseaudio:hover {
-    background: @surface1;
-    box-shadow: inset -1 2px @sky;
+    background: @base;
+    box-shadow: inset -2 2px @sky;
 }
 
 #pulseaudio.muted:hover {
-    box-shadow: inset -1 2px @red;
+    box-shadow: inset -2 2px @red;
 }
 
 /* ===== Network ===== */
@@ -119,12 +132,12 @@
 }
 
 #network:hover {
-    background: @surface1;
-    box-shadow: inset -1 2px @green;
+    background: @base;
+    box-shadow: inset -2 2px @green;
 }
 
 #network.disconnected:hover {
-    box-shadow: inset -1 2px @yellow;
+    box-shadow: inset -2 2px @yellow;
 }
 
 /* ===== Bluetooth ===== */
@@ -140,8 +153,8 @@
 }
 
 #bluetooth:hover {
-    background: @surface1;
-    box-shadow: inset -1 2px @blue;
+    background: @base;
+    box-shadow: inset -2 2px @blue;
 }
 
 /* ===== System Monitor ===== */
@@ -192,8 +205,8 @@
 }
 
 #power-profiles-daemon:hover {
-    background: @surface1;
-    box-shadow: inset -1 2px @lavender;
+    background: @base;
+    box-shadow: inset -2 2px @lavender;
 }
 
 #battery {
@@ -234,11 +247,11 @@
     font-size: 20;
     border-radius: 0 10 10 0px;
     padding: 0 10 0 5px;
-    margin: 0 15 0 0px;
+    margin: 0 5 0 0px;
 }
 
 #custom-power:hover {
     background: @red;
     color: @text;
-    box-shadow: inset -1 2px @surface1;
+    box-shadow: inset -2 2px @base;
 }
