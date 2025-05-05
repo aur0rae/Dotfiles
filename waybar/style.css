@@ -130,7 +130,7 @@
 }
 
 #network.disconnected {
-    border: @yellow;
+    border: 2px solid @yellow;
 }
 
 #network:hover {

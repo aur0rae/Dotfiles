@@ -7,16 +7,18 @@ add_newline = true
 palette = "catppuccin_mocha"
 
 format = """
-[](lavender)\
-[](fg:surface0 bg:lavender)\
+[◢](lavender)\
+[  ](fg:surface0 bg:lavender)\
 $username\
 $hostname\
-[](fg:lavender bg:blue)\
+[◤](fg:lavender bg:blue)\
 $directory\
-[](fg:blue bg:sky)\
+[◤](fg:blue bg:sky)\
 $git_branch\
 $git_status\
-[ ](sky)\n
+[◤](fg:sky bg:teal)\
+$time\
+[◤ ](teal)\n
 [❯](lavender) 
 """
 
@@ -51,6 +53,12 @@ format = '[ $symbol $branch ]($style)'
 [git_status]
 style = "bg:sky fg:surface0"
 format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:teal fg:surface0"
+format = '[ $time ]($style)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
