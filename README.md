@@ -1,19 +1,16 @@
-# My Sway config
+# Hyprland Dots
 
-This is my current working config for Sway.
+This is my current working config for Hyprland.
 
 ## Usage:
 
-Sway is a tiling Wayland compositor/WM and as such, requires some basic keybinds to 
+Hyprland is a tiling Wayland compositor/WM and as such, requires some basic keybinds to 
 function. The most important ones are listed below.
 
 - Spawn a terminal - MOD + Shift + Enter
 - Kill a window - MOD + Shift + Q
 - Reload Sway - MOD + Shift + C
 - Kill Sway - MOD + Shift + E
-
-To get the full list of bindings, check `sway/config`. At the moment, these are
-fairly stock, but in time they may change.
 
 ## Dependencies:
 
