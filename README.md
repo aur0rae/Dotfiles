@@ -14,37 +14,37 @@ function. The most important ones are listed below.
 - Reload Sway - MOD + Shift + C
 - Kill Sway - MOD + Shift + E
 
-## Dependencies:
+## Installation:
 
-This currently relies on a few dependencies.
+This currently relies on several dependencies available on Arch Linux and other
+distributions. For simplicity, I'm only going to show Arch setup.
 
-- Hyprland
-- Hyprlock
-- Hyprpaper
-- Hypridle
+First, you should install an AUR helper like `paru`.
 
-- Waybar
+```bash
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
 
-- Wofi
+Then you can install the numerous dependencies.
 
-- Dunst
+```bash
+paru -S hyprland hyprlock hyprpaper hypridle hyprcursor \
+  uwsm waybar wofi dunst kitty thunar qt6ct-kde nwg-look
 
-- Kitty
-
-- Thunar
-
-- Pavucontrol
-- NetworkManager Applet
-- Blueman
-
-- Starship
-- Brightnessctl
-- slurp
-- grim
-- wl-clipboard
-- power-profiles-daemon
-- otf-font-awesome
-- ttf-terminus-nerd
+paru -S pavucontrol blueman nm-connection-editor \
+  starship brightnessctl slurp grim wl-clipboard \
+  bat fzf zoxide eza power-profiles-daemon breeze 
+  breeze-gtk otf-font-awesome ttf-terminus-nerd
+```
 
 These are mostly interchangeable, but make sure to change the corresponding binds 
 in the config.
+
+After this is done, you can move everything to the corresponding folders. Copy the
+contents of `config` into `~/.config`, and make sure your `.bashrc` and `.bash_profile`
+have the right changes to load you into the OS.
+
+It may also be ideal to install `reflector` and `pacman-contrib` to and set them up,
+alongside using `grub-customizer` to add a grub theme to be greeted by on boot.
