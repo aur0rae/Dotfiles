@@ -2,6 +2,8 @@
 
 This is my current working config for Hyprland.
 
+![My Hyprland config](https://github.com/aur0rae/dotfiles/blob/main/res/hypr.png)
+
 ## Usage:
 
 Hyprland is a tiling Wayland compositor/WM and as such, requires some basic keybinds to 
