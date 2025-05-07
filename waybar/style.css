@@ -1,6 +1,6 @@
 /* ===== Global ===== */
 
-@import "mocha.css";
+@import "theme.css";
 
 * {
     min-height: 0px;
@@ -10,257 +10,228 @@
 
 #waybar {
     background: transparent;
-    color: @text;
+    color: @background;
 }
 
 /* ===== Workspaces ===== */
 
 #workspaces {
-    background: @surface0;
-    border: 2px solid @lavender;
+    background: @background;
+    border: 2px solid @color1;
 
     font-size: 16px;
-    border-radius: 10;
-    margin: 0 5px;
+    border-radius: 20px;
+    margin: 0px 5px;
 }
 
 #workspaces button {
-    border: 2px solid @surface0;
-    color: @text;
+    border: 2px solid @background;
+    color: @foreground;
 
-    padding: 0 7 0 0px;
+    border-radius: 20px;
+    padding: 0px 10px;
 }
 
-#workspaces button.focused {
-    background: @lavender;
-    color: @surface0;
-}
-
-#workspaces button:hover {
-    background: @base;
-    border-top: 2px solid @lavender;
-    border-left: 2px solid @lavender;
-}
-
-#workspaces button.focused:hover {
-    background: @lavender;
-    border: 2px solid @lavender;
+#workspaces button.active {
+    background: @color1;
+    color: @background;
 }
 
 /* ===== Clock ===== */
 
 #clock {
-    background: @surface0;
-    border: 2px solid @lavender;
+    background: @background;
+    border: 2px solid @color1;
+    color: @foreground;
 
     font-size: 12px;
-    border-radius: 10px;
-    padding: 0 10px;
+    border-radius: 20px;
+    padding: 0px 10px;
 }
 
 #clock:hover {
-    background: @base;
-    box-shadow: inset 0 2px @lavender;
+    background: @background-focused;
 }
 
 /* ===== Idle Inhibitor ===== */
 
 #idle_inhibitor {
-    background: @surface0;
-    border: 2px solid @green;
-    color: @text;
+    background: @background;
+    border: 2px solid @color2;
+    color: @foreground;
 
     font-size: 12px;
-    border-radius: 10px;
-    margin: 0 10px;
-    padding: 0 10px;
+    border-radius: 20px;
+    margin: 0px 10px;
+    padding: 0px 10px;
 }
 
 #idle_inhibitor:hover {
-    background: @base;
-    box-shadow: inset -2 2px @green;
+    background: @background-focused;
 }
 
 #idle_inhibitor.activated {
-    background: @green;
-    color: @surface0;
-}
-
-#idle_inhibitor.activated:hover {
-    box-shadow: inset -2 2px @base;
+    background: @color2;
+    color: @background;
 }
 
 /* ===== Volume ===== */
 
 #pulseaudio {
-    background: @surface0;
-    border: 2px solid @sky;
-    color: @text;
+    background: @background;
+    border: 2px solid @color3;
+    color: @foreground;
 
     font-size: 12px;
-    border-radius: 10px;
-    padding: 0 10px;
-    margin: 0 10 0 0px;
+    border-radius: 20px;
+    padding: 0px 10px;
+    margin: 0px 10px 0px 0px;
 }
 
 #pulseaudio.muted {
-    border: 2px solid @red;
+    border: 2px solid @disconnected;
 }
 
 #pulseaudio:hover {
-    background: @base;
-    box-shadow: inset -2 2px @sky;
-}
-
-#pulseaudio.muted:hover {
-    box-shadow: inset -2 2px @red;
+    background: @background-focused;
 }
 
 /* ===== Network ===== */
 
 #network {
-    background: @surface0;
-    border: 2px solid @teal;
-    color: @text;
+    background: @background;
+    border: 2px solid @color4;
+    color: @foreground;
 
     font-size: 12px;
-    border-radius: 10px;
-    padding: 0 10 0 5px;
-    margin: 0 10 0 0px;
+    border-radius: 20px;
+    padding: 0px 10px;
+    margin: 0px 10px 0px 0px;
 }
 
 #network.disconnected {
-    border: 2px solid @yellow;
+    border: 2px solid @disconnected;
 }
 
 #network:hover {
-    background: @base;
-    box-shadow: inset -2 2px @green;
-}
-
-#network.disconnected:hover {
-    box-shadow: inset -2 2px @yellow;
+    background: @background-focused;
 }
 
 /* ===== Bluetooth ===== */
 
 #bluetooth {
-    background: @surface0;
-    border: 2px solid @blue;
-    color: @text;
+    background: @background;
+    border: 2px solid @color5;
+    color: @foreground;
 
     font-size: 12px;
-    border-radius: 10px;
-    padding: 0 10px;
-    margin: 0 10 0 0px;
+    border-radius: 20px;
+    padding: 0px 10px;
+    margin: 0px 10px 0px 0px;
 }
 
 #bluetooth:hover {
-    background: @base;
-    box-shadow: inset -2 2px @blue;
+    background: @background-focused;
 }
 
 /* ===== System Monitor ===== */
 
 #cpu {
-    background: @surface0;
-    border-top: 2px solid @lavender;
-    border-left: 2px solid @lavender;
-    border-bottom: 2px solid @lavender;
-    color: @text;
+    background: @background;
+    border-top: 2px solid @color1;
+    border-left: 2px solid @color1;
+    border-bottom: 2px solid @color1;
+    color: @foreground;
 
     font-size: 12px;
-    border-radius: 10 0 0 10px;
-    padding: 0 5 0 10px;
+    border-radius: 20px 0px 0px 20px;
+    padding: 0px 5px 0px 10px;
 }
 
 #memory {
-    background: @surface0;
-    border-top: 2px solid @lavender;
-    border-bottom: 2px solid @lavender;
-    color: @text;
+    background: @background;
+    border-top: 2px solid @color1;
+    border-bottom: 2px solid @color1;
+    color: @foreground;
 
     font-size: 12px;
-    padding: 0 5px;
+    padding: 0px 5px;
 }
 
 /* ===== CPU Temp ===== */
 
 #temperature {
-    background : @surface0;
-    border-top: 2px solid @lavender;
-    border-bottom: 2px solid @lavender;
-    color: @text;
+    background : @background;
+    border-top: 2px solid @color1;
+    border-bottom: 2px solid @color1;
+    color: @foreground;
 
     font-size: 12px;
-    padding: 0 5px;
-}
-
-#temperature.critical {
+    padding: 0px 5px;
 }
 
 /* ===== Power ===== */
 
 #power-profiles-daemon {
-    background: @surface0;
-    border-top: 2px solid @lavender;
-    border-bottom: 2px solid @lavender;
-    color: @text;
+    background: @background;
+    border-top: 2px solid @color1;
+    border-bottom: 2px solid @color1;
+    color: @foreground;
 
     font-size: 12px;
-    padding: 0 10 0 5px;
+    padding: 0px 5px;
 }
 
 #power-profiles-daemon:hover {
-    background: @base;
-    box-shadow: inset -2 2px @lavender;
+    background: @background-focused;
 }
 
 #battery {
-    background: @surface0;
-    border-top: 2px solid @lavender;
-    border-right: 2px solid @lavender;
-    border-bottom: 2px solid @lavender;
-    color: @text;
+    background: @background;
+    border-top: 2px solid @color1;
+    border-right: 2px solid @color1;
+    border-bottom: 2px solid @color1;
+    color: @foreground;
 
     font-size: 12px;
-    padding: 0 10 0 5px;
-    border-radius: 0 10 10 0px;
-    margin: 0 10 0 0px;
+    padding: 0px 10px 0px 5px;
+    border-radius: 0px 20px 20px 0px;
+    margin: 0px 10px 0px 0px;
 }
 
 #battery.critical {
-    background: @red;
-    color: @surface0;
+    background: @warn;
+    color: @foreground;
 }
 
 /* ===== Tray ===== */
 
 #tray {
-    background: @surface0;
-    border-top: 2px solid @red;
-    border-left: 2px solid @red;
-    border-bottom: 2px solid @red;
+    background: @background;
+    border-top: 2px solid @color6;
+    border-left: 2px solid @color6;
+    border-bottom: 2px solid @color6;
     
     font-size: 12px;
-    border-radius: 10 0 0 10px;
-    padding: 0 5 0 10px;
+    border-radius: 20px 0px 0px 20px;
+    padding: 0px 5px 0px 10px;
 }
 
 #custom-power {
-    background: @surface0;
-    border-top: 2px solid @red;
-    border-right: 2px solid @red;
-    border-bottom: 2px solid @red;
-    
+    background: @background;
+    border-top: 2px solid @color6;
+    border-right: 2px solid @color6;
+    border-bottom: 2px solid @color6;
+    color: @foreground;
+
     font-size: 20px;
-    border-radius: 0 10 10 0px;
-    padding: 0 10 0 5px;
-    margin: 0 5 0 0px;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0px 0px 0px 5px;
+    margin: 0px 5px 0px 0px;
 }
 
 #custom-power:hover {
-    background: @red;
-    color: @text;
-    box-shadow: inset -2 2px @base;
+    background: @warn;
+    color: @background;
+    box-shadow: inset -2px 2px @background-focused;
 }

@@ -19,26 +19,33 @@ fairly stock, but in time they may change.
 
 This currently relies on a few dependencies.
 
-- Sway
-- Swaylock
+- Hyprland
+- Hyprlock
+- Hyprpaper
+- Hypridle
+
 - Waybar
+
 - Wofi
+
 - Dunst
+
 - Kitty
+
 - Thunar
 
-- Swaybg
-- Swayidle
 - Pavucontrol
 - NetworkManager Applet
 - Blueman
+
+- Starship
 - Brightnessctl
-- otf-font-awesome
-- ttf-terminus-nerd
 - slurp
 - grim
 - wl-clipboard
-
+- power-profiles-daemon
+- otf-font-awesome
+- ttf-terminus-nerd
 
 These are mostly interchangeable, but make sure to change the corresponding binds 
 in the config.
