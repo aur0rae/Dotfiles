@@ -19,7 +19,7 @@
     background: @background;
     border: 2px solid @color1;
 
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 20px;
     margin: 0px 5px;
 }
@@ -44,13 +44,9 @@
     border: 2px solid @color1;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 20px;
     padding: 0px 10px;
-}
-
-#clock:hover {
-    background: @background-focused;
 }
 
 /* ===== Idle Inhibitor ===== */
@@ -60,14 +56,15 @@
     border: 2px solid @color2;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 20px;
     margin: 0px 10px;
     padding: 0px 10px;
 }
 
 #idle_inhibitor:hover {
-    background: @background-focused;
+    background: @color2;
+    color: @background;
 }
 
 #idle_inhibitor.activated {
@@ -82,7 +79,7 @@
     border: 2px solid @color3;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 20px;
     padding: 0px 10px;
     margin: 0px 10px 0px 0px;
@@ -103,7 +100,7 @@
     border: 2px solid @color4;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 20px;
     padding: 0px 10px;
     margin: 0px 10px 0px 0px;
@@ -124,7 +121,7 @@
     border: 2px solid @color5;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 20px;
     padding: 0px 10px;
     margin: 0px 10px 0px 0px;
@@ -143,7 +140,7 @@
     border-bottom: 2px solid @color1;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 20px 0px 0px 20px;
     padding: 0px 5px 0px 10px;
 }
@@ -154,7 +151,7 @@
     border-bottom: 2px solid @color1;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     padding: 0px 5px;
 }
 
@@ -166,7 +163,7 @@
     border-bottom: 2px solid @color1;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     padding: 0px 5px;
 }
 
@@ -178,7 +175,7 @@
     border-bottom: 2px solid @color1;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     padding: 0px 5px;
 }
 
@@ -193,7 +190,7 @@
     border-bottom: 2px solid @color1;
     color: @foreground;
 
-    font-size: 12px;
+    font-size: 16px;
     padding: 0px 10px 0px 5px;
     border-radius: 0px 20px 20px 0px;
     margin: 0px 10px 0px 0px;
@@ -212,7 +209,7 @@
     border-left: 2px solid @color6;
     border-bottom: 2px solid @color6;
     
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 20px 0px 0px 20px;
     padding: 0px 5px 0px 10px;
 }
@@ -224,7 +221,7 @@
     border-bottom: 2px solid @color6;
     color: @foreground;
 
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 0px 20px 20px 0px;
     padding: 0px 0px 0px 5px;
     margin: 0px 5px 0px 0px;
